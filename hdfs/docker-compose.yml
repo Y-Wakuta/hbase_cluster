@@ -1,0 +1,45 @@
+version: '3'
+
+services:
+  namenode:
+    container_name: namenode
+    image: uhopper/hadoop-namenode
+    tty: true
+    ports:
+      - "50070:50070"
+      - "8020:8020"
+    env_file:
+      - ./namenode_env
+  datanode1:
+    container_name: datanode1
+    image: uhopper/hadoop-datanode
+    tty: true
+    #    ports:
+    #      - "50075:50075"
+    #      - "50020:50020"
+    #      - "41430:41430"
+    #      - "50010:50010"
+    env_file:
+      - ./datanode_env
+  datanode2:
+    container_name: datanode2
+    image: uhopper/hadoop-datanode
+    tty: true
+    #    ports:
+    #      - "50075:50075"
+    #      - "50020:50020"
+    #      - "41430:41430"
+    #      - "50010:50010"
+    env_file:
+      - ./datanode_env
+  datanode3:
+    container_name: datanode3
+    image: uhopper/hadoop-datanode
+    tty: true
+    #    ports:
+    #      - "50075:50075"
+    #      - "50020:50020"
+    #      - "41430:41430"
+    #      - "50010:50010"
+    env_file:
+      - ./datanode_env
