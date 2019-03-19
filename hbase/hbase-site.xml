@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+  <property>
+    <name>hbase.cluster.distributed</name>
+    <value>true</value>
+  </property>
+  <property>
+    <name>hbase.rootdir</name>
+    <value>hdfs://namenode:8020/hbase</value>
+  </property>
+   
+  <property>
+ <name>hbase.zookeeper.property.clientPort</name>
+  <value>2181</value>
+  </property>
+                 
+  <property>
+  <name>hbase.zookeeper.quorum</name>
+   <value>zoo</value>
+   </property>
+<property>
+  <name>hbase.zookeeper.session.timeout</name>
+   <value>60000</value>
+   </property>
+ 
+ <property>
+    <name>hbase.status.published</name>
+    <value>false</value>
+  </property>
+ <property>
+    <name>hbase.region.replica.replication.enabled</name>
+    <value>true</value>
+ </property>
+ 
+</configuration>

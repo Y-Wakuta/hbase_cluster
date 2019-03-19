@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  zoo:
+    container_name: zoo
+    image: zookeeper
+    tty: true
+    restart: always
+    ports:
+      - "2181:2181"
+    environment:
+      ZOO_MY_ID: 1

@@ -1,0 +1,60 @@
+version: '3'
+
+networks:
+  zookeeper_default:
+    external: true
+services:
+  hbase1:
+    container_name: hbase1
+    image: harisekhon/hbase:1.2
+    tty: true
+    ports:
+      - "8080:8080"
+      - "8085:8085"
+      - "9090:9090"
+      - "9095:9095"
+      - "16000:16000"
+      - "16201:16201"
+      - "16301:16301"
+      - "16010:16010"
+    volumes:
+      - "./hbase-site.xml:/hbase-1.2.6/conf/hbase-site.xml"
+        #env_file: hbase_env
+    networks:
+      - zookeeper_default
+  hbase2:
+    container_name: hbase2
+    image: harisekhon/hbase:1.2
+    tty: true
+    # ports:
+    #   - "8080:8080"
+    #   - "8085:8085"
+    #   - "9090:9090"
+    #   - "9095:9095"
+    #   - "16000:16000"
+    #   - "16201:16201"
+    #   - "16301:16301"
+    #   - "16010:16010"
+    volumes:
+      - "./hbase-site.xml:/hbase-1.2.6/conf/hbase-site.xml"
+        #env_file: hbase_env
+    networks:
+      - zookeeper_default
+  hbase3:
+    container_name: hbase3
+    image: harisekhon/hbase:1.2
+    tty: true
+    # ports:
+    #   - "8080:8080"
+    #   - "8085:8085"
+    #   - "9090:9090"
+    #   - "9095:9095"
+    #   - "16000:16000"
+    #   - "16201:16201"
+    #   - "16301:16301"
+    #   - "16010:16010"
+    volumes:
+      - "./hbase-site.xml:/hbase-1.2.6/conf/hbase-site.xml"
+        #env_file: hbase_env
+    networks:
+      - zookeeper_default
